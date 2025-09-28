@@ -25,7 +25,7 @@ O projeto busca prever o preço de fechamento **do próximo pregão (t+1)** da a
 ## Preparação de Dados
 
 - O dataset foi dividido em **treino (80%)** e **teste (20%)**, respeitando a ordem temporal.  
-- Não se utilizou validação cruzada tradicional, mas houve busca de hiperparâmetros por GridSearch em Ridge, Random Forest e XGBoost.  
+- Não foi utilizada validação cruzada tradicional pois, em problemas de séries temporais, ela viola a dependência temporal dos dados e pode gerar data leakage. Optou-se por uma divisão temporal (treino: primeiros 80%, teste: últimos 20%) que reflete melhor a aplicação real do modelo. Houve busca de hiperparâmetros por GridSearch em Ridge, Random Forest e XGBoost.  
 - Para o Ridge Regression foi aplicada **padronização dos atributos**.  
 - Features irrelevantes (como `Date`, `y`) foram removidas do treino.  
 

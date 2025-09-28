@@ -1,4 +1,4 @@
-# README — MVP PETR4 Forecast (Versão Atualizada)
+# README — MVP PETR4 Forecast 
 
 ## Definição do Problema
 
